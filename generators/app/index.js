@@ -7,7 +7,7 @@ module.exports = yeoman.Base.extend({
   prompting: function () {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the kryptonian ' + chalk.red('generator-choo') + ' generator!'
+      'Welcome to the kryptonian ' + chalk.red('choo') + ' generator!'
     ));
 
     var prompts = [{
@@ -24,13 +24,20 @@ module.exports = yeoman.Base.extend({
   },
 
   writing: function () {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
+    var files = [
+      { template: 'README.md' },
+      { template: 'package.json' },
+      { template: 'index.js' },
+      { template: 'index.html', output: 'public/index.html' }
+    ];
+
+    files.forEach(function (file) {
+      this.fs.copy(this.templatePath(file.template), this.destinationPath(file.output || file.template));
+    }.bind(this));
   },
 
   install: function () {
-    this.installDependencies();
+    this.npmInstall();
+    //this.installDependencies();
   }
 });
