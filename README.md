@@ -1,18 +1,7 @@
-
-<h1 align="center">choo</h1>
-
-<div align="center">
-  :steam_locomotive::train::train::train::train::train:
-</div>
-<div align="center">
-  <strong>WIP</strong>
-</div>
-<div align="center">
-  PRs welcomed ;)
-</div>
+[DEPRECATED] This project is no longer maintained, please consider [this generator](https://github.com/trainyard/generator-choo) instead.
 
 
-# generator-choo [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-choo ![](https://img.shields.io/badge/deprecated-X-red.svg?style=flat)[![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > generator for choo
 
 ## Installation
